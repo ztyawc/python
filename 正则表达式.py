@@ -1,5 +1,0 @@
-import re
-string="PHPSESSID=ipb72lf2j0l32i72eelkt10s0h; path=/, wordpress_420a9792b7082fc5c0fde63b2fa51820=ztyawc%7C1655298486%7CjyttIVfj4G6usz1YqovJYCfeFpv9YIJUnWbaZXovAVS%7C0fac5e0f8d4606732ab9e7227fcef276d7db60b8a3de61d30743f428d6f55c63; path=/wp-content/plugins; HttpOnly, wordpress_420a9792b7082fc5c0fde63b2fa51820=ztyawc%7C1655298486%7CjyttIVfj4G6usz1YqovJYCfeFpv9YIJUnWbaZXovAVS%7C0fac5e0f8d4606732ab9e7227fcef276d7db60b8a3de61d30743f428d6f55c63; path=/wp-admin; HttpOnly, wordpress_logged_in_420a9792b7082fc5c0fde63b2fa51820=ztyawc%7C1655298486%7CjyttIVfj4G6usz1YqovJYCfeFpv9YIJUnWbaZXovAVS%7Cce302174d30de106a9d0bf1f9e37dc3a7cdf50151b682f3482c038c68045abf7; path=/; HttpOnly";
-p=re.compile(r'wordpress_logged_in.*')
-for one in p.findall(string):
-    print(one)

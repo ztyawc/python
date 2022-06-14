@@ -26,6 +26,6 @@ data = {
 
 response = requests.post('https://hualeshe.com/wp-admin/admin-ajax.php', headers=headers, data=data)
 print(response.json())
-a=response.json()['msg']
+a=response.status_code
 a=str(a)
 push1("签到",a)
