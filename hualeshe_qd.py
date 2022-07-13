@@ -58,7 +58,7 @@ def qd(cookie):
     response = requests.post('https://hualeshe.com/wp-admin/admin-ajax.php', headers=headers, data=data)
     return response.json()['msg']
 def select():
-    conn = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd='', charset='utf8', db='hualeshe')
+    conn = pymysql.connect(host='43.154.35.115', port=3310, user='root', passwd='123456', charset='utf8', db='hualeshe')
     cursor = conn.cursor()
     sql = "SELECT users.username FROM users"
     cursor.execute(sql)
