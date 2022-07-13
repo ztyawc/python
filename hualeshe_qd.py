@@ -1,7 +1,8 @@
 import requests
 import re
 import pymysql
-import time
+import os
+from zty.tui import push1
 def login(username):
     headers = {
         'Host': 'hualeshe.com',
@@ -64,9 +65,19 @@ def select():
     while True:
         row = cursor.fetchone()
         if not row:
+            #读取文件并推送
+            f = open("data.txt", encoding='utf-8')
+            a = f.read()
+            push1("签到", a)
+            f.close()
+            #删除文件
+            os.remove('data.txt')
             break
         username=row[0]
         a=login(username)
         msg=qd(a)
-        print(username+msg)
+        str=username+msg
+        with open('data.txt', 'a',encoding='utf-8') as f:  # 设置文件对象
+            f.write(str + '\n')  # 将字符串写入文件中
+            f.close()
 select()
