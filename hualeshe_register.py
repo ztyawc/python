@@ -14,7 +14,6 @@ headers = {
     'accept': '*/*',
     'accept-language': 'zh-CN,zh;q=0.9',
     'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
-    # 'cookie': 'PHPSESSID=n7hppq3qaptk85ophpb5vilmdm',
     'origin': 'https://hualeshe.com',
     'referer': 'https://hualeshe.com/',
     'sec-ch-ua': '".Not/A)Brand";v="99", "Google Chrome";v="103", "Chromium";v="103"',
