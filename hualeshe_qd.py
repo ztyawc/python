@@ -85,6 +85,12 @@ def jf(cookie):
     jf = str(jf)
     print(jf)
     return jf
+#插入
+def insert(sql):
+    conn = pymysql.connect(host='43.154.35.115', port=3310, user='root', passwd='123456', charset='utf8', db='hualeshe')
+    cursor = conn.cursor()
+    cursor.execute(sql)
+    conn.commit()
 def select():
     conn = pymysql.connect(host='43.154.35.115', port=3310, user='root', passwd='123456', charset='utf8', db='hualeshe')
     cursor = conn.cursor()
@@ -106,6 +112,9 @@ def select():
         msg=qd(a)
         num=jf(a)
         str=username+msg+num
+        #更新积分
+        sql1='UPDATE users SET num="{}" WHERE username="{}"'.format(num,username)
+        insert(sql1)
         with open('data.txt', 'a',encoding='utf-8') as f:  # 设置文件对象
             f.write(str + '\n')  # 将字符串写入文件中
             f.close()
