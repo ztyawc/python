@@ -1,5 +1,4 @@
 import requests
-import json
 from zty.push import push1
 from zty.test import login
 headers = {
@@ -20,9 +19,7 @@ headers = {
     'accept-language': 'zh-CN,zh;q=0.9',
     'cookie': login(),
 }
-
-data = {
-  'action': 'user_qiandao'
-}
-response = requests.post('https://hualeshe.com/wp-admin/admin-ajax.php', headers=headers, data=data)
-print(response.json())
+response = requests.post('https://hualeshe.com/user?action=index', headers=headers)
+a=response.text
+print(a)
+a=str(a)
