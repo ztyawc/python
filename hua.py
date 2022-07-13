@@ -1,6 +1,6 @@
 import requests
 import json
-from zty.push import push1
+from zty.tui import push1
 from zty.test import login
 headers = {
     'Host': 'hualeshe.com',
