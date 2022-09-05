@@ -19,7 +19,7 @@ def datong():
 
     response = requests.post('http://www.sxydwx.cn/market/marketplatfront/marketplat/sign_sx/signSX/sign.do',
                              headers=headers, data=data)
-    print(response.json())
+    print(response.json()['msg'])
 def shanxi():
     headers = {
         'Host': 'sx.10086.cn',
@@ -40,6 +40,6 @@ def shanxi():
 
     response = requests.post('http://sx.10086.cn/market/marketplatfront/marketplat/sign_sx/signSX/sign.do',
                              headers=headers, data=data)
-    print(response.json())
+    print(response.json()['msg'])
 datong()
 shanxi()
